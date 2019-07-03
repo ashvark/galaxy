@@ -1,3 +1,4 @@
+
 """Binary classes"""
 from __future__ import print_function
 
@@ -550,7 +551,8 @@ class Bam(BamNative):
     def samtools_dataprovider(self, dataset, **settings):
         """Generic samtools interface - all options available through settings."""
         dataset_source = dataproviders.dataset.DatasetDataProvider(dataset)
-        return dataproviders.dataset.SamtoolsDataProvider(dataset_source, **settings)
+        # return dataproviders.dataset.SamtoolsDataProvider(dataset_source, **settings)
+        return dataproviders.dataset.SamtoolsDataProvider(dataset, **settings)
 
 
 class ProBam(Bam):
